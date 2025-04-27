@@ -16,14 +16,14 @@
     <link href="css/one-page-wonder.css" rel="stylesheet">
     <style>
       .header-image {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('DeptPhoto.png');
         background-size: cover;
         background-position: center;
-        height: 60vh;
+        min-height: 60vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
+        color: #fff;
       }
       .skills-section {
         padding: 50px 0;
@@ -49,6 +49,35 @@
         color: #333;
         margin: 0 10px;
         font-size: 1.5em;
+      }
+      .profile-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        padding: 40px 0 0 0;
+      }
+      .profile-pic {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        background: #eee;
+      }
+      .profile-title {
+        text-align: left;
+      }
+      @media (max-width: 600px) {
+        .profile-header {
+          flex-direction: column;
+          gap: 15px;
+          padding: 20px 0 0 0;
+        }
+        .profile-title h1 {
+          font-size: 2em;
+        }
       }
     </style>
   </head>
@@ -79,10 +108,13 @@
     </nav>
 
     <div class="header-image">
-      <div class="headline">
-        <div class="container">
-          <h1>Nisarg Mahale</h1>
-          <h2>Mechatronics Engineer & Robotics Enthusiast</h2>
+      <div class="container">
+        <div class="profile-header">
+          <img src="WhatsApp Image 2025-04-27 at 9.13.51 PM.jpeg" alt="Profile Photo" class="profile-pic">
+          <div class="profile-title">
+            <h1 style="margin-bottom: 10px;">Nisarg Mahale</h1>
+            <h2 style="font-size:1.5em; font-weight:400; margin-bottom:0;">Mechatronics Engineer & Robotics Enthusiast</h2>
+          </div>
         </div>
       </div>
     </div>
@@ -90,7 +122,7 @@
     <div class="container">
       <section id="about" class="section">
         <h2 class="section-heading">About Me</h2>
-        <p class="lead">Hands-on engineer with a passion for designing and building intelligent robotic systems. Experienced in fast-paced, multidisciplinary projects—bringing ideas from CAD to simulation to real-world testing.</p>
+        <p class="lead">Hey! I'm a Mechanical Engineering student at BITS Pilani with a love for design, simulation, and robotics. I enjoy turning ideas into real things—whether that's optimizing engineering processes, building cool robots, or leading hands-on projects with friends. I thrive on solving problems, learning new tech, and working with teams to make engineering more efficient and fun!</p>
       </section>
 
       <hr class="featurette-divider">
