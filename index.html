@@ -62,79 +62,51 @@
         <article class="project featured">
           <header>
             <p class="tag">Primary project &middot; Sim &harr; Real fidelity</p>
-            <h3>Digital Twin &amp; Simulation Fidelity Framework</h3>
-            <p class="role">Isaac Sim 5.x &middot; PhysX &middot; ros2_control &middot; UR RTDE</p>
+            <h3>Digital Twin &amp; Simulation Fidelity</h3>
+            <p class="role">Isaac Sim &middot; PhysX &middot; ros2_control</p>
           </header>
           <p>
-            Built a high-fidelity digital twin of the full mobile manipulator — swerve base, lift, 6-DoF arm,
-            tools, and spray hose — and validated real-vs-sim equivalence across kinematics, dynamics, sensors,
-            and control. The bar wasn't "looks right"; it was a quantitative spec sheet with tolerances.
+            Built a high-fidelity digital twin in Isaac Sim to enable reliable validation of robot behaviour
+            across simulation and real-world deployments.
           </p>
           <ul class="bullets">
-            <li>Defined an equivalence framework with <em>strict tolerances</em> &mdash; mass &lt;2%, joint angle &lt;0.5&deg;, time drift &lt;10&nbsp;ms/min, swerve speed error &lt;2%, lift travel error &lt;2&nbsp;mm.</li>
-            <li>Modelled <em>spray-hose dynamics</em> end-to-end &mdash; mass distribution, bending stiffness, damping, friction, contact, occlusion &mdash; and matched real swing-decay and TCP disturbance behaviour within ±20%.</li>
-            <li>Validated <em>ros2_control + UR RTDE @ 500&nbsp;Hz</em> for trajectory tracking, force disturbances, and the URSim protective-stop / recovery pipeline at &lt;100&nbsp;ms latency.</li>
-            <li>Engineered behavioural parity for <em>collision detection, protective stops, and recovery</em> across self-collision, environment-collision, and false-positive filtering &mdash; 100% trigger on valid collisions, zero spurious stops on nominal motion.</li>
-            <li>Tuned PhysX actuators, encoders, and saturation models for both <em>lift</em> and <em>swerve modules</em> against real CSV logs &mdash; settling times and RMS tracking errors within ±20% of hardware.</li>
-          </ul>
-          <ul class="metrics">
-            <li><strong>500&nbsp;Hz</strong><span>UR RTDE</span></li>
-            <li><strong>&lt;10&nbsp;ms</strong><span>clock drift / min</span></li>
-            <li><strong>&lt;2%</strong><span>mass / speed error</span></li>
-            <li><strong>100%</strong><span>collision parity</span></li>
+            <li>Focused on aligning <em>kinematics, dynamics, sensing, and control</em> to ensure consistency between simulated and physical systems.</li>
+            <li>Modelled complex physical interactions and validated <em>control and safety pipelines</em> against real-world behaviour.</li>
+            <li>Made simulation a trustworthy tool for testing and iteration &mdash; the anchor for everything downstream.</li>
           </ul>
         </article>
 
         <article class="project featured">
           <header>
             <p class="tag">Distributed systems &middot; Edge compute</p>
-            <h3>Distributed HIL Pipeline &mdash; Isaac Sim &times; Dual Jetson Orins</h3>
-            <p class="role">Isaac Sim &middot; AGX Orin + MiiVii Orin &middot; CycloneDDS &middot; GStreamer / V4L2</p>
+            <h3>Distributed HIL Pipeline</h3>
+            <p class="role">Isaac Sim &middot; Dual Jetson Orins &middot; ROS 2</p>
           </header>
           <p>
-            Architected a hardware-in-the-loop pipeline that mirrors the production deployment topology &mdash; a sim
-            workstation streaming sensor data over a managed switch into a Planner Orin (perception, Nav2, MoveIt2)
-            and a Controller Orin (ros2_control, safety, RTDE). The point: surface every cross-machine, ARM64, and
-            thermal failure mode <em>before</em> it shows up on a job site.
+            Developed a hardware-in-the-loop system connecting Isaac Sim with a distributed dual-Orin compute
+            setup, replicating the real robot architecture.
           </p>
           <ul class="bullets">
-            <li>Implemented <em>driver-level sensor emulation</em> instead of ROS2 topic passthrough &mdash; cameras over RTP into <code>v4l2loopback</code>, RoboSense Airy as proprietary MSOP/DIFOP UDP, YDLIDAR GS2 over emulated UART. Production drivers (DeepStream, <code>rslidar_sdk</code>, YDLIDAR SDK) run unmodified on the Orins.</li>
-            <li>Eliminated DDS as the bandwidth bottleneck by pushing high-rate sensor data <em>off DDS</em> entirely &mdash; sustained ~2.24&nbsp;Gbps wire throughput while DDS carries only small, latency-critical control traffic.</li>
-            <li>Achieved <em>RTF&nbsp;&ge;&nbsp;1.0</em> headless and <em>&lt;25&nbsp;ms</em> end-to-end control-loop latency under the full v2 sensor load (6 cameras @ 1080p10, 2&times; 96-channel lidars, IMU, safety lidars, RTDE @ 500&nbsp;Hz).</li>
-            <li>Validated <em>system-level health</em> &mdash; per-topic latency budgets, jitter distributions, <code>/clock</code> drift &lt;10&nbsp;ms over 1-hour soaks, thermal stability of both Orins under MAXN load.</li>
-            <li>Specified the QoS strategy, CycloneDDS unicast peer config, jumbo-frame tuning, and recovery behaviour for cable-disconnect and process-restart scenarios (recovery &lt;5&nbsp;s).</li>
-          </ul>
-          <ul class="metrics">
-            <li><strong>~2.24&nbsp;Gbps</strong><span>sustained throughput</span></li>
-            <li><strong>&lt;25&nbsp;ms</strong><span>e2e control latency</span></li>
-            <li><strong>RTF &ge; 1.0</strong><span>real-time factor</span></li>
-            <li><strong>2&times; Orin</strong><span>Planner + Controller</span></li>
+            <li>Designed pipelines for realistic <em>sensor emulation, communication, and synchronisation</em> across machines.</li>
+            <li>Handled <em>high-bandwidth data streams</em> and ensured stable, real-time operation under full system load.</li>
+            <li>Enabled end-to-end validation of robotics software in a <em>production-like environment</em> &mdash; long before it touches a job site.</li>
           </ul>
         </article>
 
         <article class="project featured">
           <header>
             <p class="tag">Motion planning &middot; Design validation</p>
-            <h3>Tool Coverage Testing Pipeline</h3>
-            <p class="role">MoveIt 2 &middot; TRAC-IK &middot; FCL / PhysX &middot; trimesh &middot; Isaac Sim</p>
+            <h3>Tool Coverage Analysis Pipeline</h3>
+            <p class="role">MoveIt 2 &middot; IK &middot; Collision checking &middot; Isaac Sim</p>
           </header>
           <p>
-            Built a quantitative pipeline to answer a deceptively simple question: of every square metre of drywall on
-            a real construction site, how much can the robot actually <em>reach</em> with a given tool? It turns
-            mechanical-design iterations into measurable coverage deltas instead of intuition.
+            Built a pipeline to evaluate robot design feasibility by computing tool coverage across large-scale
+            construction site geometries.
           </p>
           <ul class="bullets">
-            <li>Defined a <em>quantified coverage metric</em> &mdash; feasible TCP poses over total drywall area &mdash; with per-failure-mode breakdown (IK failure, self-collision, environment collision, docking-clearance violation).</li>
-            <li>Ran <em>large-scale IK + collision feasibility</em> across the 9-DoF system (base x/y/yaw + lift + UR10e 6-DoF) using TRAC-IK with FCL collision under MoveIt&nbsp;2.</li>
-            <li>Processed <em>50k&ndash;100k surface points per site</em> via uniform mesh sampling, with TCP-pose generation per tool clearance (200&ndash;300&nbsp;mm sprayer, 50&nbsp;mm sander).</li>
-            <li>Validated solver and collision accuracy at the unit level &mdash; &lt;2&nbsp;mm TCP error, 100% collision-detection accuracy, ±0.5&nbsp;mm offset accuracy &mdash; before scaling.</li>
-            <li>Defined a <em>fast-feedback test set</em> of geometric edge cases (recessed beams, multi-planar walls, beam-wall gaps, ducts, closets) for sub-hour mechanical-design sanity checks before running the full 100-site sweep.</li>
-          </ul>
-          <ul class="metrics">
-            <li><strong>9 DoF</strong><span>full-system IK</span></li>
-            <li><strong>50&ndash;100k</strong><span>points / site</span></li>
-            <li><strong>100 sites</strong><span>target coverage sweep</span></li>
-            <li><strong>&lt;2&nbsp;mm</strong><span>TCP solver accuracy</span></li>
+            <li>Generated dense pose sets and validated feasibility using <em>inverse kinematics, collision checking, and task-specific constraints</em>.</li>
+            <li>Aggregated results into <em>quantitative coverage metrics</em> to identify design limitations and guide iteration.</li>
+            <li>Supports scalable evaluation of robot performance across <em>diverse real-world scenarios</em>.</li>
           </ul>
         </article>
       </section>
