@@ -90,11 +90,6 @@ code {
 
 main { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
 
-/* Hero */
-.hero {
-  padding: 120px 0 80px;
-  border-bottom: 1px solid var(--border);
-}
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 12px;
@@ -103,6 +98,66 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
   color: var(--accent-warm);
   margin: 0 0 28px;
 }
+
+/* Hero — poster style */
+.hero {
+  position: relative;
+  padding: 0;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  border-bottom: 1px solid var(--border);
+  isolation: isolate;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: #111 url('../images/hero-bg.jpg') center 35% / cover no-repeat;
+  z-index: -2;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(11,11,12,.55) 0%, rgba(11,11,12,.78) 55%, rgba(11,11,12,.98) 100%),
+    linear-gradient(90deg, rgba(11,11,12,.65) 0%, rgba(11,11,12,.25) 50%, rgba(11,11,12,.65) 100%);
+}
+.hero-content {
+  position: relative;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(120px, 18vh, 180px) var(--pad) clamp(60px, 10vh, 90px);
+  min-height: clamp(560px, 80vh, 760px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.who {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 32px;
+}
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 4px 18px rgba(0,0,0,.45);
+  background: #1a1a1d;
+}
+.who .name {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+  letter-spacing: -.005em;
+}
+.who .eyebrow { margin: 0 0 2px; }
+
 .hero h1 {
   font-size: clamp(32px, 5.4vw, 56px);
   line-height: 1.08;
@@ -110,6 +165,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
   font-weight: 600;
   margin: 0 0 28px;
   max-width: 18ch;
+  text-shadow: 0 2px 24px rgba(0,0,0,.4);
 }
 .hero h1 .accent { color: var(--text-dim); font-weight: 400; }
 .hero .lead {
