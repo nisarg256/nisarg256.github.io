@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nisarg Mahale — Robotics & Simulation Engineer. Digital twins, HIL pipelines, and motion planning at Origin Autonomy.">
+    <meta name="description" content="Nisarg Mahale — Systems & Simulation Engineer. Digital twins, distributed HIL pipelines, and motion-feasibility tooling.">
     <meta name="author" content="Nisarg Mahale">
     <meta name="theme-color" content="#0b0b0c">
 
-    <title>Nisarg Mahale — Robotics & Simulation Engineer</title>
+    <title>Nisarg Mahale — Systems &amp; Simulation Engineer</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,84 +30,91 @@
 
     <main id="top">
       <section class="hero">
-        <p class="eyebrow">Robotics &middot; Simulation &middot; Systems</p>
-        <h1>I build the bridge between simulated robots<br><span class="accent">and the ones that actually have to work.</span></h1>
+        <p class="eyebrow">Systems &middot; Simulation &middot; Robotics</p>
+        <h1>I design systems that mirror real robot<br><span class="accent">behaviour and infrastructure.</span></h1>
         <p class="lead">
-          Currently at <a href="https://www.originautonomy.com" target="_blank" rel="noopener">Origin Autonomy</a>, working on
-          high-fidelity digital twins, hardware-in-the-loop pipelines, and motion-feasibility tooling for a mobile
-          construction manipulator.
+          High-fidelity digital twins, distributed hardware-in-the-loop pipelines, and motion-feasibility
+          tooling &mdash; built to make simulation a trustworthy stand-in for real deployments. Currently
+          at <a href="https://origin.tech" target="_blank" rel="noopener">Origin Autonomy</a>.
         </p>
         <div class="cta">
-          <a class="btn primary" href="#work">See my work</a>
+          <a class="btn primary" href="#work">See selected work</a>
           <a class="btn ghost" href="mailto:nisarg.mahale@gmail.com">Get in touch</a>
         </div>
         <ul class="meta">
           <li><span>Based in</span> Bengaluru, IN</li>
-          <li><span>Stack</span> Isaac Sim &middot; ROS 2 &middot; PhysX &middot; MoveIt 2 &middot; CUDA</li>
-          <li><span>Status</span> Building robots</li>
+          <li><span>Focus</span> Sim&ndash;real validation &middot; distributed systems &middot; real-time control</li>
+          <li><span>Stack</span> Isaac Sim &middot; ROS 2 &middot; PhysX &middot; MoveIt 2</li>
         </ul>
       </section>
 
       <section id="work" class="section">
         <div class="section-head">
-          <p class="kicker">01 / Featured Work</p>
-          <h2>Origin Autonomy</h2>
+          <p class="kicker">01 / Selected Work</p>
+          <h2>Selected Work</h2>
           <p class="section-sub">
-            Origin builds an autonomous mobile manipulator for interior construction —
-            a swerve-drive base, a vertical lift, and a UR10e arm carrying spray and sanding tools.
-            My work sits at the intersection of simulation, low-level control, and edge systems.
+            Recent work at <a href="https://origin.tech" target="_blank" rel="noopener">Origin Autonomy</a> &mdash;
+            an autonomous mobile manipulator for interior construction. My work sits at the
+            intersection of simulation, distributed systems, and real-time control.
           </p>
         </div>
 
-        <article class="project featured">
-          <header>
-            <p class="tag">Primary project &middot; Sim &harr; Real fidelity</p>
-            <h3>Digital Twin &amp; Simulation Fidelity</h3>
-            <p class="role">Isaac Sim &middot; PhysX &middot; ros2_control</p>
-          </header>
-          <p>
-            Built a high-fidelity digital twin in Isaac Sim to enable reliable validation of robot behaviour
-            across simulation and real-world deployments.
-          </p>
-          <ul class="bullets">
-            <li>Focused on aligning <em>kinematics, dynamics, sensing, and control</em> to ensure consistency between simulated and physical systems.</li>
-            <li>Modelled complex physical interactions and validated <em>control and safety pipelines</em> against real-world behaviour.</li>
-            <li>Made simulation a trustworthy tool for testing and iteration &mdash; the anchor for everything downstream.</li>
-          </ul>
-        </article>
+        <p class="rank">Flagship</p>
+        <div class="flagship-grid">
+          <article class="project featured flagship">
+            <header>
+              <p class="tag">Sim &harr; Real validation</p>
+              <h3>Digital Twin for Simulation-to-Real Validation</h3>
+              <p class="role">Isaac Sim &middot; PhysX &middot; ros2_control</p>
+            </header>
+            <p>
+              Designed a high-fidelity digital twin to enable reliable simulation-to-real validation of
+              robot behaviour &mdash; aligning kinematics, dynamics, sensing and control between simulated
+              and physical systems.
+            </p>
+            <ul class="bullets">
+              <li>Modelled complex physical interactions and validated <em>control and safety pipelines</em> under real-time constraints.</li>
+              <li>Built an equivalence framework that turns simulation into a reproducible <em>source of truth</em> for system behaviour.</li>
+            </ul>
+            <p class="impact"><span>Why it matters</span> Enables simulation to be used as a reliable testing environment before real-world deployment.</p>
+          </article>
 
-        <article class="project featured">
-          <header>
-            <p class="tag">Distributed systems &middot; Edge compute</p>
-            <h3>Distributed HIL Pipeline</h3>
-            <p class="role">Isaac Sim &middot; Dual Jetson Orins &middot; ROS 2</p>
-          </header>
-          <p>
-            Developed a hardware-in-the-loop system connecting Isaac Sim with a distributed dual-Orin compute
-            setup, replicating the real robot architecture.
-          </p>
-          <ul class="bullets">
-            <li>Designed pipelines for realistic <em>sensor emulation, communication, and synchronisation</em> across machines.</li>
-            <li>Handled <em>high-bandwidth data streams</em> and ensured stable, real-time operation under full system load.</li>
-            <li>Enabled end-to-end validation of robotics software in a <em>production-like environment</em> &mdash; long before it touches a job site.</li>
-          </ul>
-        </article>
+          <article class="project featured flagship">
+            <header>
+              <p class="tag">Distributed systems &middot; Real-time</p>
+              <h3>Distributed HIL System &mdash; Isaac Sim + Dual Orin</h3>
+              <p class="role">Isaac Sim &middot; Dual Jetson Orins &middot; ROS 2</p>
+            </header>
+            <p>
+              Designed a distributed hardware-in-the-loop system that replicates the real robot's compute
+              and network architecture &mdash; Isaac Sim driving a dual-Orin edge stack across a
+              production-grade interconnect.
+            </p>
+            <ul class="bullets">
+              <li>Built pipelines for <em>sensor emulation, communication, and synchronisation</em> across machines.</li>
+              <li>Sustained <em>high-bandwidth data streams</em> under real-time constraints with bounded end-to-end latency.</li>
+            </ul>
+            <p class="impact"><span>Why it matters</span> Allows full-stack validation under production-like constraints before hardware deployment.</p>
+          </article>
+        </div>
 
-        <article class="project featured">
+        <p class="rank">Supporting</p>
+        <article class="project supporting">
           <header>
-            <p class="tag">Motion planning &middot; Design validation</p>
-            <h3>Tool Coverage Analysis Pipeline</h3>
-            <p class="role">MoveIt 2 &middot; IK &middot; Collision checking &middot; Isaac Sim</p>
+            <p class="tag">Motion planning &middot; Design evaluation</p>
+            <h3>Tool Coverage &amp; Design Evaluation Pipeline</h3>
+            <p class="role">MoveIt 2 &middot; IK &middot; Collision checking</p>
           </header>
           <p>
-            Built a pipeline to evaluate robot design feasibility by computing tool coverage across large-scale
-            construction site geometries.
+            Built a pipeline to evaluate robot design feasibility by computing tool coverage across
+            large-scale construction site geometries &mdash; turning hardware iterations into measurable
+            deltas instead of intuition.
           </p>
           <ul class="bullets">
-            <li>Generated dense pose sets and validated feasibility using <em>inverse kinematics, collision checking, and task-specific constraints</em>.</li>
-            <li>Aggregated results into <em>quantitative coverage metrics</em> to identify design limitations and guide iteration.</li>
-            <li>Supports scalable evaluation of robot performance across <em>diverse real-world scenarios</em>.</li>
+            <li>Generated dense pose sets and validated feasibility through <em>inverse kinematics, collision checking, and task constraints</em>.</li>
+            <li>Aggregated results into <em>quantitative coverage metrics</em> that surface design limitations and guide iteration.</li>
           </ul>
+          <p class="impact"><span>Why it matters</span> Provides quantitative metrics to guide robot design and deployment feasibility.</p>
         </article>
       </section>
 
