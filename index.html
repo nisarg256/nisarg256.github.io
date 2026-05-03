@@ -3,277 +3,321 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nisarg Mahale - Mechatronics Engineer and Robotics Enthusiast">
+    <meta name="description" content="Nisarg Mahale — Robotics & Simulation Engineer. Digital twins, HIL pipelines, and motion planning at Origin Autonomy.">
     <meta name="author" content="Nisarg Mahale">
+    <meta name="theme-color" content="#0b0b0c">
 
-    <title>Nisarg Mahale - Portfolio</title>
+    <title>Nisarg Mahale — Robotics & Simulation Engineer</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="css/one-page-wonder.css" rel="stylesheet">
-    <style>
-      .header-image {
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('DeptPhoto.png');
-        background-size: cover;
-        background-position: center;
-        min-height: 60vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-      }
-      .skills-section {
-        padding: 50px 0;
-        background-color: #f8f9fa;
-      }
-      .experience-card {
-        margin-bottom: 30px;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-      .project-card {
-        margin-bottom: 30px;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-      .contact-info {
-        font-size: 1.2em;
-        margin: 20px 0;
-      }
-      .social-links a {
-        color: #333;
-        margin: 0 10px;
-        font-size: 1.5em;
-      }
-      .profile-header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-        padding: 60px 0 0 0;
-      }
-      .profile-pic {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 4px solid #fff;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-        background: #eee;
-      }
-      .profile-title {
-        text-align: left;
-      }
-      @media (max-width: 600px) {
-        .profile-header {
-          flex-direction: column;
-          gap: 15px;
-          padding: 30px 0 0 0;
-        }
-        .profile-title h1 {
-          font-size: 2em;
-        }
-      }
-      .section {
-        margin-top: 40px;
-        margin-bottom: 30px;
-      }
-      #about.section {
-        margin-top: 60px;
-        margin-bottom: 20px;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
   </head>
 
   <body>
-    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Nisarg Mahale</a>
-        </div>
-
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
+    <header class="nav">
+      <div class="nav-inner">
+        <a href="#top" class="brand">nisarg mahale</a>
+        <nav>
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
-    </nav>
+    </header>
 
-    <div class="header-image">
-      <div class="container">
-        <div class="profile-header">
-          <img src="WhatsApp Image 2025-04-27 at 9.13.51 PM.jpeg" alt="Profile Photo" class="profile-pic">
-          <div class="profile-title">
-            <h1 style="margin-bottom: 10px;">Nisarg Mahale</h1>
-            <h2 style="font-size:1.5em; font-weight:400; margin-bottom:0;">Mechatronics Engineer & Robotics Enthusiast</h2>
-          </div>
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">Robotics &middot; Simulation &middot; Systems</p>
+        <h1>I build the bridge between simulated robots<br><span class="accent">and the ones that actually have to work.</span></h1>
+        <p class="lead">
+          Currently at <a href="https://www.originautonomy.com" target="_blank" rel="noopener">Origin Autonomy</a>, working on
+          high-fidelity digital twins, hardware-in-the-loop pipelines, and motion-feasibility tooling for a mobile
+          construction manipulator.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#work">See my work</a>
+          <a class="btn ghost" href="mailto:nisarg.mahale@gmail.com">Get in touch</a>
         </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <section id="about" class="section">
-        <h2 class="section-heading">About Me</h2>
-        <p class="lead">Hey! I'm a Mechanical Engineering student at BITS Pilani with a love for design, simulation, and robotics. I enjoy turning ideas into real things—whether that's optimizing engineering processes, building cool robots, or leading hands-on projects with friends. I thrive on solving problems, learning new tech, and working with teams to make engineering more efficient and fun!</p>
+        <ul class="meta">
+          <li><span>Based in</span> Bengaluru, IN</li>
+          <li><span>Stack</span> Isaac Sim &middot; ROS 2 &middot; PhysX &middot; MoveIt 2 &middot; CUDA</li>
+          <li><span>Status</span> Building robots</li>
+        </ul>
       </section>
 
-      <hr class="featurette-divider">
+      <section id="work" class="section">
+        <div class="section-head">
+          <p class="kicker">01 / Featured Work</p>
+          <h2>Origin Autonomy</h2>
+          <p class="section-sub">
+            Origin builds an autonomous mobile manipulator for interior construction —
+            a swerve-drive base, a vertical lift, and a UR10e arm carrying spray and sanding tools.
+            My work sits at the intersection of simulation, low-level control, and edge systems.
+          </p>
+        </div>
+
+        <article class="project featured">
+          <header>
+            <p class="tag">Primary project &middot; Sim &harr; Real fidelity</p>
+            <h3>Digital Twin &amp; Simulation Fidelity Framework</h3>
+            <p class="role">Isaac Sim 5.x &middot; PhysX &middot; ros2_control &middot; UR RTDE</p>
+          </header>
+          <p>
+            Built a high-fidelity digital twin of the full mobile manipulator — swerve base, lift, 6-DoF arm,
+            tools, and spray hose — and validated real-vs-sim equivalence across kinematics, dynamics, sensors,
+            and control. The bar wasn't "looks right"; it was a quantitative spec sheet with tolerances.
+          </p>
+          <ul class="bullets">
+            <li>Defined an equivalence framework with <em>strict tolerances</em> &mdash; mass &lt;2%, joint angle &lt;0.5&deg;, time drift &lt;10&nbsp;ms/min, swerve speed error &lt;2%, lift travel error &lt;2&nbsp;mm.</li>
+            <li>Modelled <em>spray-hose dynamics</em> end-to-end &mdash; mass distribution, bending stiffness, damping, friction, contact, occlusion &mdash; and matched real swing-decay and TCP disturbance behaviour within ±20%.</li>
+            <li>Validated <em>ros2_control + UR RTDE @ 500&nbsp;Hz</em> for trajectory tracking, force disturbances, and the URSim protective-stop / recovery pipeline at &lt;100&nbsp;ms latency.</li>
+            <li>Engineered behavioural parity for <em>collision detection, protective stops, and recovery</em> across self-collision, environment-collision, and false-positive filtering &mdash; 100% trigger on valid collisions, zero spurious stops on nominal motion.</li>
+            <li>Tuned PhysX actuators, encoders, and saturation models for both <em>lift</em> and <em>swerve modules</em> against real CSV logs &mdash; settling times and RMS tracking errors within ±20% of hardware.</li>
+          </ul>
+          <ul class="metrics">
+            <li><strong>500&nbsp;Hz</strong><span>UR RTDE</span></li>
+            <li><strong>&lt;10&nbsp;ms</strong><span>clock drift / min</span></li>
+            <li><strong>&lt;2%</strong><span>mass / speed error</span></li>
+            <li><strong>100%</strong><span>collision parity</span></li>
+          </ul>
+        </article>
+
+        <article class="project featured">
+          <header>
+            <p class="tag">Distributed systems &middot; Edge compute</p>
+            <h3>Distributed HIL Pipeline &mdash; Isaac Sim &times; Dual Jetson Orins</h3>
+            <p class="role">Isaac Sim &middot; AGX Orin + MiiVii Orin &middot; CycloneDDS &middot; GStreamer / V4L2</p>
+          </header>
+          <p>
+            Architected a hardware-in-the-loop pipeline that mirrors the production deployment topology &mdash; a sim
+            workstation streaming sensor data over a managed switch into a Planner Orin (perception, Nav2, MoveIt2)
+            and a Controller Orin (ros2_control, safety, RTDE). The point: surface every cross-machine, ARM64, and
+            thermal failure mode <em>before</em> it shows up on a job site.
+          </p>
+          <ul class="bullets">
+            <li>Implemented <em>driver-level sensor emulation</em> instead of ROS2 topic passthrough &mdash; cameras over RTP into <code>v4l2loopback</code>, RoboSense Airy as proprietary MSOP/DIFOP UDP, YDLIDAR GS2 over emulated UART. Production drivers (DeepStream, <code>rslidar_sdk</code>, YDLIDAR SDK) run unmodified on the Orins.</li>
+            <li>Eliminated DDS as the bandwidth bottleneck by pushing high-rate sensor data <em>off DDS</em> entirely &mdash; sustained ~2.24&nbsp;Gbps wire throughput while DDS carries only small, latency-critical control traffic.</li>
+            <li>Achieved <em>RTF&nbsp;&ge;&nbsp;1.0</em> headless and <em>&lt;25&nbsp;ms</em> end-to-end control-loop latency under the full v2 sensor load (6 cameras @ 1080p10, 2&times; 96-channel lidars, IMU, safety lidars, RTDE @ 500&nbsp;Hz).</li>
+            <li>Validated <em>system-level health</em> &mdash; per-topic latency budgets, jitter distributions, <code>/clock</code> drift &lt;10&nbsp;ms over 1-hour soaks, thermal stability of both Orins under MAXN load.</li>
+            <li>Specified the QoS strategy, CycloneDDS unicast peer config, jumbo-frame tuning, and recovery behaviour for cable-disconnect and process-restart scenarios (recovery &lt;5&nbsp;s).</li>
+          </ul>
+          <ul class="metrics">
+            <li><strong>~2.24&nbsp;Gbps</strong><span>sustained throughput</span></li>
+            <li><strong>&lt;25&nbsp;ms</strong><span>e2e control latency</span></li>
+            <li><strong>RTF &ge; 1.0</strong><span>real-time factor</span></li>
+            <li><strong>2&times; Orin</strong><span>Planner + Controller</span></li>
+          </ul>
+        </article>
+
+        <article class="project featured">
+          <header>
+            <p class="tag">Motion planning &middot; Design validation</p>
+            <h3>Tool Coverage Testing Pipeline</h3>
+            <p class="role">MoveIt 2 &middot; TRAC-IK &middot; FCL / PhysX &middot; trimesh &middot; Isaac Sim</p>
+          </header>
+          <p>
+            Built a quantitative pipeline to answer a deceptively simple question: of every square metre of drywall on
+            a real construction site, how much can the robot actually <em>reach</em> with a given tool? It turns
+            mechanical-design iterations into measurable coverage deltas instead of intuition.
+          </p>
+          <ul class="bullets">
+            <li>Defined a <em>quantified coverage metric</em> &mdash; feasible TCP poses over total drywall area &mdash; with per-failure-mode breakdown (IK failure, self-collision, environment collision, docking-clearance violation).</li>
+            <li>Ran <em>large-scale IK + collision feasibility</em> across the 9-DoF system (base x/y/yaw + lift + UR10e 6-DoF) using TRAC-IK with FCL collision under MoveIt&nbsp;2.</li>
+            <li>Processed <em>50k&ndash;100k surface points per site</em> via uniform mesh sampling, with TCP-pose generation per tool clearance (200&ndash;300&nbsp;mm sprayer, 50&nbsp;mm sander).</li>
+            <li>Validated solver and collision accuracy at the unit level &mdash; &lt;2&nbsp;mm TCP error, 100% collision-detection accuracy, ±0.5&nbsp;mm offset accuracy &mdash; before scaling.</li>
+            <li>Defined a <em>fast-feedback test set</em> of geometric edge cases (recessed beams, multi-planar walls, beam-wall gaps, ducts, closets) for sub-hour mechanical-design sanity checks before running the full 100-site sweep.</li>
+          </ul>
+          <ul class="metrics">
+            <li><strong>9 DoF</strong><span>full-system IK</span></li>
+            <li><strong>50&ndash;100k</strong><span>points / site</span></li>
+            <li><strong>100 sites</strong><span>target coverage sweep</span></li>
+            <li><strong>&lt;2&nbsp;mm</strong><span>TCP solver accuracy</span></li>
+          </ul>
+        </article>
+      </section>
 
       <section id="experience" class="section">
-        <h2 class="section-heading">Experience</h2>
-        
-        <div class="experience-card">
-          <h3>Upsurge Labs</h3>
-          <h4>Mechatronics Engineer</h4>
-          <p class="text-muted">October 2024 – April 2025 | Bengaluru, Karnataka</p>
-          <ul>
-            <li>Designed, prototyped, and tested a 12-DOF robotic quadruped, implementing gait planning, locomotion algorithms, and terrain-adaptive movement.</li>
-            <li>Simulated reinforcement learning environments in Isaac Sim and MuJoCo, enabling the robot to overcome varied terrain and obstacles.</li>
-            <li>Integrated robot models with ROS2 for sensor fusion, motion planning, and real-time control.</li>
-            <li>Designed multiple bionic robotic hands with bearing joints and roller joints with tendon drive.</li>
-          </ul>
+        <div class="section-head">
+          <p class="kicker">02 / Experience</p>
+          <h2>Before Origin</h2>
         </div>
 
-        <div class="experience-card">
-          <h3>Mahindra Group</h3>
-          <h4>Plant Engineering Intern</h4>
-          <p class="text-muted">May 2024 – July 2024 | Igatpuri, Maharashtra</p>
-          <ul>
-            <li>Deployed a YOLOv5-based computer vision system for helmet detection across CCTV feeds.</li>
-            <li>Integrated Automated Guided Vehicles (AGVs) into the assembly line, reducing Takt time by 5 seconds.</li>
-            <li>Optimized intra-plant logistics through simulations and hands-on implementation of new robotic workflows.</li>
-          </ul>
-        </div>
+        <div class="timeline">
+          <div class="entry">
+            <p class="when">Oct 2024 &mdash; Apr 2025</p>
+            <div class="what">
+              <h3>Upsurge Labs <span>&middot; Mechatronics Engineer</span></h3>
+              <p>Bengaluru, IN</p>
+              <ul class="bullets dense">
+                <li>Designed, prototyped and tested a <em>12-DoF quadruped</em> &mdash; gait planning, locomotion control, and terrain-adaptive movement.</li>
+                <li>Trained RL policies in <em>Isaac Sim and MuJoCo</em> for varied terrain and obstacle traversal.</li>
+                <li>Integrated robot models with ROS&nbsp;2 for sensor fusion, motion planning and real-time control.</li>
+                <li>Designed bionic robotic hands with bearing/roller joints and tendon-driven actuation.</li>
+              </ul>
+            </div>
+          </div>
 
-        <div class="experience-card">
-          <h3>PNT Robotics</h3>
-          <h4>Robotics Intern</h4>
-          <p class="text-muted">May 2023 – July 2023 | Mumbai, Maharashtra</p>
-          <ul>
-            <li>Simulated robotic arms in ROS + Gazebo and designed structural parts in SolidWorks with FEA on Ansys.</li>
-            <li>Developed robotic support structures to withstand over 1000 kg load using optimized CAD models.</li>
-          </ul>
+          <div class="entry">
+            <p class="when">May 2024 &mdash; Jul 2024</p>
+            <div class="what">
+              <h3>Mahindra Group <span>&middot; Plant Engineering Intern</span></h3>
+              <p>Igatpuri, IN</p>
+              <ul class="bullets dense">
+                <li>Deployed a <em>YOLOv5-based helmet-detection</em> system across plant CCTV feeds.</li>
+                <li>Integrated AGVs into the assembly line, cutting Takt time by <em>5&nbsp;s</em>.</li>
+                <li>Optimised intra-plant logistics through simulation and on-floor implementation of new robotic workflows.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="entry">
+            <p class="when">May 2023 &mdash; Jul 2023</p>
+            <div class="what">
+              <h3>PNT Robotics <span>&middot; Robotics Intern</span></h3>
+              <p>Mumbai, IN</p>
+              <ul class="bullets dense">
+                <li>Simulated robotic arms in ROS + Gazebo; designed structural parts in SolidWorks with FEA in Ansys.</li>
+                <li>Developed support structures rated for <em>&gt;1000&nbsp;kg</em> loads via optimised CAD.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
-
-      <hr class="featurette-divider">
 
       <section id="projects" class="section">
-        <h2 class="section-heading">Projects & Research</h2>
-        
-        <div class="project-card">
-          <h3>Project Hydra</h3>
-          <h4>Team Co-Lead</h4>
-          <p class="text-muted">Aug 2023 – Dec 2024 | BITS Pilani - Goa campus</p>
-          <ul>
-            <li>Leading the design and development of an Autonomous Underwater Vehicle (AUV) for marine exploration.</li>
-            <li>Achieved a robust chassis design for 100 m depth rating and 4-hour operational battery life.</li>
-            <li>Utilized CFD simulations on COMSOL to enhance hydrodynamic efficiency.</li>
-          </ul>
+        <div class="section-head">
+          <p class="kicker">03 / Projects &amp; Research</p>
+          <h2>Side work</h2>
         </div>
 
-        <div class="project-card">
-          <h3>Team GigaWatt</h3>
-          <h4>Chassis and Sponsorship Lead</h4>
-          <p class="text-muted">Jan 2023 – May 2024 | BITS Pilani - Goa campus</p>
-          <ul>
-            <li>Engineered an SAE Formula Bharat-compliant EV chassis with an optimized safety factor of 1.6-2.</li>
-            <li>Used SolidWorks for design and Ansys for FEA and structural integrity analysis.</li>
-          </ul>
-        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Project Hydra</h3>
+            <p class="card-meta">AUV team co-lead &middot; BITS Pilani Goa &middot; 2023&ndash;2024</p>
+            <p>Led design and development of an autonomous underwater vehicle &mdash; 100&nbsp;m depth-rated chassis, 4&nbsp;hr battery life, hydrodynamic optimisation via COMSOL CFD.</p>
+          </article>
 
-        <div class="project-card">
-          <h3>Structural Health Monitoring of Civil Structures</h3>
-          <h4>Research Project</h4>
-          <p class="text-muted">Oct 2023 – May 2024</p>
-          <ul>
-            <li>Designed and implemented cement-based PZT sensors for advanced damage detection in civil structures, contributing to predictive maintenance strategies.</li>
-            <li>Conducted vibrational analysis using LabVIEW and MATLAB, enabling data-driven insights into structural health monitoring systems.</li>
-          </ul>
-        </div>
+          <article class="card">
+            <h3>Team GigaWatt</h3>
+            <p class="card-meta">Chassis &amp; sponsorship lead &middot; Formula Bharat EV &middot; 2023&ndash;2024</p>
+            <p>Engineered a Formula Bharat-compliant EV chassis with safety factor 1.6&ndash;2.0 &mdash; SolidWorks design, Ansys FEA, full structural integrity validation.</p>
+          </article>
 
-        <div class="project-card">
-          <h3>Smart Wheels for Extra-Terrestrial Applications</h3>
-          <h4>Research Project</h4>
-          <p class="text-muted">Aug 2024 – Present</p>
-          <ul>
-            <li>Developed innovative wire-mesh wheels for extraterrestrial rovers, leveraging SolidWorks for CAD and COMSOL for performance simulation under varying terrain conditions.</li>
-            <li>Prototyped wheels using super-elastic NiTinol, addressing unique challenges of payload handling and durability for extreme environments.</li>
-          </ul>
+          <article class="card">
+            <h3>Smart Wheels for Extra-Terrestrial Rovers</h3>
+            <p class="card-meta">Research &middot; 2024&ndash;2025</p>
+            <p>Designed wire-mesh wheels in super-elastic NiTinol for planetary rovers &mdash; CAD in SolidWorks, terrain-response simulation in COMSOL.</p>
+          </article>
+
+          <article class="card">
+            <h3>Structural Health Monitoring</h3>
+            <p class="card-meta">Research &middot; 2023&ndash;2024</p>
+            <p>Implemented cement-based PZT sensors for damage detection in civil structures; vibrational analysis in LabVIEW + MATLAB for predictive-maintenance pipelines.</p>
+          </article>
         </div>
       </section>
 
-      <hr class="featurette-divider">
+      <section class="section skills">
+        <div class="section-head">
+          <p class="kicker">04 / Stack</p>
+          <h2>Tools I reach for</h2>
+        </div>
 
-      <section id="skills" class="section skills-section">
-        <h2 class="section-heading">Skills</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <h3>CAD and Analysis</h3>
+        <div class="skills-grid">
+          <div>
+            <h4>Simulation &amp; Robotics</h4>
             <ul>
-              <li>Solidworks</li>
-              <li>Siemens NX</li>
-              <li>Ansys</li>
-              <li>COMSOL</li>
-              <li>MatLAB</li>
+              <li>Isaac Sim &middot; PhysX</li>
+              <li>ROS 2 &middot; ros2_control</li>
+              <li>MoveIt 2 &middot; TRAC-IK &middot; FCL</li>
+              <li>MuJoCo &middot; Gazebo</li>
+              <li>UR RTDE</li>
             </ul>
           </div>
-          <div class="col-md-4">
-            <h3>Simulation and Robotics</h3>
+          <div>
+            <h4>Systems &amp; Edge</h4>
             <ul>
-              <li>MuJoCo</li>
-              <li>IsaacSim</li>
-              <li>Gazebo</li>
-              <li>ROS2</li>
+              <li>Jetson AGX Orin &middot; MiiVii</li>
+              <li>CycloneDDS &middot; QoS tuning</li>
+              <li>GStreamer &middot; V4L2</li>
+              <li>DeepStream</li>
+              <li>Linux real-time tuning</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Languages</h4>
+            <ul>
               <li>Python</li>
               <li>C++</li>
+              <li>CUDA (working level)</li>
+              <li>Bash</li>
             </ul>
           </div>
-          <div class="col-md-4">
-            <h3>Education</h3>
-            <p>BITS Pilani - Goa campus</p>
-            <p>Bachelor of Engineering (B.E.) in Mechanical Engineering with a minor in Robotics and Automation</p>
-            <p>Expected Jul 2025</p>
+          <div>
+            <h4>CAD &amp; Analysis</h4>
+            <ul>
+              <li>SolidWorks &middot; Siemens NX</li>
+              <li>Ansys &middot; COMSOL</li>
+              <li>MATLAB</li>
+              <li>trimesh &middot; Open3D</li>
+            </ul>
           </div>
+        </div>
+
+        <div class="education">
+          <h4>Education</h4>
+          <p><strong>BITS Pilani &mdash; Goa Campus</strong></p>
+          <p>B.E. Mechanical Engineering with Minor in Robotics &amp; Automation &middot; 2025</p>
         </div>
       </section>
 
-      <hr class="featurette-divider">
-
-      <section id="contact" class="section">
-        <h2 class="section-heading">Contact</h2>
-        <div class="contact-info">
-          <p><i class="fas fa-envelope"></i> nisarg.mahale@gmail.com</p>
-          <p><i class="fas fa-phone"></i> 9967662398</p>
+      <section id="contact" class="section contact">
+        <div class="section-head">
+          <p class="kicker">05 / Contact</p>
+          <h2>Let's talk robots.</h2>
+          <p class="section-sub">
+            I'm easiest to reach over email. Happy to chat about simulation fidelity,
+            sim&ndash;real transfer, distributed robot systems, or anything weird at the edge of mechanical and software.
+          </p>
         </div>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/nisarg-mahale-5b0516230/" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+        <div class="contact-grid">
+          <a href="mailto:nisarg.mahale@gmail.com">
+            <span class="label">Email</span>
+            <span class="value">nisarg.mahale@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/nisarg-mahale-5b0516230/" target="_blank" rel="noopener">
+            <span class="label">LinkedIn</span>
+            <span class="value">/in/nisarg-mahale</span>
+          </a>
+          <a href="https://github.com/nisarg256" target="_blank" rel="noopener">
+            <span class="label">GitHub</span>
+            <span class="value">@nisarg256</span>
+          </a>
         </div>
       </section>
 
       <footer>
-        <p>&copy; 2025 Nisarg Mahale. All rights reserved.</p>
+        <p>&copy; <span id="year">2026</span> Nisarg Mahale &middot; Built with too much coffee.</p>
       </footer>
-    </div>
+    </main>
 
-    <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      // smooth highlight on nav links when scrolling
+      const links = document.querySelectorAll('.nav nav a');
+      const sections = [...document.querySelectorAll('main section[id]')];
+      const onScroll = () => {
+        const y = window.scrollY + 120;
+        let active = sections[0]?.id;
+        for (const s of sections) { if (s.offsetTop <= y) active = s.id; }
+        links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + active));
+      };
+      document.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    </script>
   </body>
 </html>
